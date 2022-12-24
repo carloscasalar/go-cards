@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-    numberOfDecks = 1
+    numberOfDecks := 1
     // Create a Dealer with numberOfDecks=1 Deck (52 cards)
     dealer := dealer.NewDealer(numberOfDecks)
 
