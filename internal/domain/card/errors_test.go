@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/vinigracindo/go-cards/internal/domain/card"
+	"github.com/carloscasalar/go-cards/internal/domain/card"
 )
 
 func Test_Errors(t *testing.T) {

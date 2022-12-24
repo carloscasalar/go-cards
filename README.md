@@ -1,13 +1,15 @@
 Go Cards
 ========
 
+Forked from https://github.com/vinigracindo/go-cards to be able to tag and import it.
+
 ```go
 package main
 
 import (
 	"fmt"
 
-	"github.com/vinigracindo/go-cards/pkg"
+	"github.com/carloscasalar/go-cards/pkg"
 )
 
 func main() {

@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/vinigracindo/go-cards/internal/domain/card"
-	"github.com/vinigracindo/go-cards/pkg/dealer"
+	"github.com/carloscasalar/go-cards/internal/domain/card"
+	"github.com/carloscasalar/go-cards/pkg/dealer"
 )
 
 func TestDealer_NewDealer(t *testing.T) {

@@ -3,7 +3,7 @@ package card
 import (
 	"fmt"
 
-	"github.com/vinigracindo/go-cards/pkg/ctypes"
+	"github.com/carloscasalar/go-cards/pkg/ctypes"
 )
 
 type Card struct {
