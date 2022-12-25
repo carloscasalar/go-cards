@@ -1,12 +1,12 @@
 ## 2.0.1 / 2022-12-25
 
-### Minor Enhancemens
+### Minor Enhancements
 
 * Card string representations now had a fixed length of 3.
 
 ## 2.0.0 / 2022-12-25
 
-### Major Enhancemens
+### Major Enhancements
 
 * `dealer.Deal` now returns an exposed interface `ctypes.Card` instead of the internal Card struct.
 
