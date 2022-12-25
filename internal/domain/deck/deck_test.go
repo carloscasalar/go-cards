@@ -1,12 +1,12 @@
 package deck_test
 
 import (
-    "testing"
+	"testing"
 
-    "github.com/carloscasalar/go-cards/internal/domain/card"
-    "github.com/carloscasalar/go-cards/internal/domain/deck"
-    "github.com/carloscasalar/go-cards/pkg/ctypes"
-    "github.com/stretchr/testify/assert"
+	"github.com/carloscasalar/go-cards/v2/internal/domain/card"
+	"github.com/carloscasalar/go-cards/v2/internal/domain/deck"
+	"github.com/carloscasalar/go-cards/v2/pkg/ctypes"
+	"github.com/stretchr/testify/assert"
 )
 
 var (
@@ -20,8 +20,8 @@ func init() {
 
 	for _, suit := range ctypes.AllSuits() {
 		for _, value := range ctypes.AllValues() {
-            newCard := card.NewCard(value, suit)
-            expectedCards = append(expectedCards, &newCard)
+			newCard := card.NewCard(value, suit)
+			expectedCards = append(expectedCards, &newCard)
 		}
 	}
 }

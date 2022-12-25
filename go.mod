@@ -1,4 +1,4 @@
-module github.com/carloscasalar/go-cards
+module github.com/carloscasalar/go-cards/v2
 
 go 1.18
 

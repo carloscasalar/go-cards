@@ -1,11 +1,11 @@
 package dealer_test
 
 import (
-    "github.com/carloscasalar/go-cards/pkg/ctypes"
-    "testing"
+	"github.com/carloscasalar/go-cards/v2/pkg/ctypes"
+	"testing"
 
-    "github.com/carloscasalar/go-cards/pkg/dealer"
-    "github.com/stretchr/testify/assert"
+	"github.com/carloscasalar/go-cards/v2/pkg/dealer"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestDealer_NewDealer(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/carloscasalar/go-cards/internal/domain/card"
-	"github.com/carloscasalar/go-cards/pkg/ctypes"
+	"github.com/carloscasalar/go-cards/v2/internal/domain/card"
+	"github.com/carloscasalar/go-cards/v2/pkg/ctypes"
 )
 
 type Deck struct {
@@ -35,7 +35,7 @@ func NewDeck() *Deck {
 	deck.Cards = make([]*ctypes.Card, 0)
 	for _, suit := range ctypes.AllSuits() {
 		for _, value := range ctypes.AllValues() {
-            newCard := card.NewCard(value, suit)
+			newCard := card.NewCard(value, suit)
 			deck.Cards = append(deck.Cards, &newCard)
 		}
 	}

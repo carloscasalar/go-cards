@@ -1,8 +1,8 @@
 package dealer
 
 import (
-	"github.com/carloscasalar/go-cards/internal/domain/deck"
-    "github.com/carloscasalar/go-cards/pkg/ctypes"
+	"github.com/carloscasalar/go-cards/v2/internal/domain/deck"
+	"github.com/carloscasalar/go-cards/v2/pkg/ctypes"
 )
 
 type Dealer struct {

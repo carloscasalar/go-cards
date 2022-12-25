@@ -9,7 +9,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/carloscasalar/go-cards/pkg"
+	"github.com/carloscasalar/go-cards/v2/pkg"
 )
 
 func main() {
