@@ -9,7 +9,7 @@ import (
 )
 
 type Deck struct {
-	Cards []*card.Card
+	Cards []*ctypes.Card
 }
 
 func (deck *Deck) Shuffle() {
@@ -20,7 +20,7 @@ func (deck *Deck) Shuffle() {
 	}
 }
 
-func (deck *Deck) PopCard() (*card.Card, error) {
+func (deck *Deck) PopCard() (*ctypes.Card, error) {
 	last := len(deck.Cards) - 1
 	if last < 0 {
 		return nil, ErrNoCards
@@ -32,10 +32,11 @@ func (deck *Deck) PopCard() (*card.Card, error) {
 
 func NewDeck() *Deck {
 	deck := &Deck{}
-	deck.Cards = make([]*card.Card, 0)
+	deck.Cards = make([]*ctypes.Card, 0)
 	for _, suit := range ctypes.AllSuits() {
 		for _, value := range ctypes.AllValues() {
-			deck.Cards = append(deck.Cards, card.NewCard(value, suit))
+            newCard := card.NewCard(value, suit)
+			deck.Cards = append(deck.Cards, &newCard)
 		}
 	}
 	return deck

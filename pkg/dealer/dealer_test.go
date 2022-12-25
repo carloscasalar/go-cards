@@ -1,11 +1,11 @@
 package dealer_test
 
 import (
-	"testing"
+    "github.com/carloscasalar/go-cards/pkg/ctypes"
+    "testing"
 
-	"github.com/stretchr/testify/assert"
-	"github.com/carloscasalar/go-cards/internal/domain/card"
-	"github.com/carloscasalar/go-cards/pkg/dealer"
+    "github.com/carloscasalar/go-cards/pkg/dealer"
+    "github.com/stretchr/testify/assert"
 )
 
 func TestDealer_NewDealer(t *testing.T) {
@@ -22,7 +22,7 @@ func TestDealer_ShuffleCards(t *testing.T) {
 	numberOfDecks := uint8(1)
 	d1 := dealer.NewDealer(numberOfDecks)
 
-	var copyDeckCards []*card.Card
+	var copyDeckCards []*ctypes.Card
 	copyDeckCards = append(copyDeckCards, d1.Deck.Cards...)
 
 	d1.ShuffleCards()
@@ -38,7 +38,6 @@ func TestDealer_Deal(t *testing.T) {
 
 	assert.NoError(t, err)
 	assert.Equal(t, 51, len(d1.Deck.Cards))
-	assert.IsType(t, &card.Card{}, c)
 	assert.NotEmpty(t, c)
 }
 

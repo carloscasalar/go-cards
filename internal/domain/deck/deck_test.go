@@ -1,26 +1,27 @@
 package deck_test
 
 import (
-	"testing"
+    "testing"
 
-	"github.com/stretchr/testify/assert"
-	"github.com/carloscasalar/go-cards/internal/domain/card"
-	"github.com/carloscasalar/go-cards/internal/domain/deck"
-	"github.com/carloscasalar/go-cards/pkg/ctypes"
+    "github.com/carloscasalar/go-cards/internal/domain/card"
+    "github.com/carloscasalar/go-cards/internal/domain/deck"
+    "github.com/carloscasalar/go-cards/pkg/ctypes"
+    "github.com/stretchr/testify/assert"
 )
 
 var (
 	numberOfCardsInDeck int
-	expectedCards       []*card.Card
+	expectedCards       []*ctypes.Card
 )
 
 func init() {
 	numberOfCardsInDeck = 52
-	expectedCards = []*card.Card{}
+	expectedCards = []*ctypes.Card{}
 
 	for _, suit := range ctypes.AllSuits() {
 		for _, value := range ctypes.AllValues() {
-			expectedCards = append(expectedCards, card.NewCard(value, suit))
+            newCard := card.NewCard(value, suit)
+            expectedCards = append(expectedCards, &newCard)
 		}
 	}
 }
@@ -40,7 +41,7 @@ func TestDeck_Shuffle(t *testing.T) {
 	assert.Equal(t, numberOfCardsInDeck, len(deck.Cards))
 	assert.NotEqual(t, expectedCards, deck.Cards)
 
-	shuffledCards := make([]*card.Card, len(deck.Cards))
+	shuffledCards := make([]*ctypes.Card, len(deck.Cards))
 	copy(shuffledCards, deck.Cards)
 
 	// Result must be different from the first shuffle
@@ -60,7 +61,7 @@ func TestDeck_PopCard(t *testing.T) {
 
 func TestDeck_PopCard_Error(t *testing.T) {
 	newDesck := deck.NewDeck()
-	newDesck.Cards = []*card.Card{}
+	newDesck.Cards = []*ctypes.Card{}
 
 	_, err := newDesck.PopCard()
 

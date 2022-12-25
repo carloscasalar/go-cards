@@ -1,22 +1,17 @@
 package card_test
 
 import (
-	"testing"
+    "testing"
 
-	"github.com/stretchr/testify/assert"
-	"github.com/carloscasalar/go-cards/internal/domain/card"
-	"github.com/carloscasalar/go-cards/pkg/ctypes"
+    "github.com/carloscasalar/go-cards/internal/domain/card"
+    "github.com/carloscasalar/go-cards/pkg/ctypes"
+    "github.com/stretchr/testify/assert"
 )
-
-func TestCard_NewCard(t *testing.T) {
-	newCard := card.NewCard(ctypes.Ace, ctypes.Spade)
-	assert.IsType(t, &card.Card{}, newCard)
-}
 
 func TestCard_String(t *testing.T) {
 	tests := []struct {
 		name string
-		card *card.Card
+		card ctypes.Card
 		want string
 	}{
 		{

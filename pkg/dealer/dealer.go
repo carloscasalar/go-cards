@@ -1,8 +1,8 @@
 package dealer
 
 import (
-	"github.com/carloscasalar/go-cards/internal/domain/card"
 	"github.com/carloscasalar/go-cards/internal/domain/deck"
+    "github.com/carloscasalar/go-cards/pkg/ctypes"
 )
 
 type Dealer struct {
@@ -13,7 +13,7 @@ func (dealer *Dealer) ShuffleCards() {
 	dealer.Deck.Shuffle()
 }
 
-func (dealer *Dealer) Deal() (*card.Card, error) {
+func (dealer *Dealer) Deal() (*ctypes.Card, error) {
 	card, err := dealer.Deck.PopCard()
 	if err != nil {
 		return nil, deck.ErrNoCards
