@@ -11,7 +11,7 @@ type card struct {
 }
 
 func (c *card) String() string {
-	return fmt.Sprintf("%s[%s]", c.Value, c.Suit)
+    return fmt.Sprintf("%2s[%s]", c.Value, c.Suit)
 }
 
 func NewCard(value ctypes.Value, suit ctypes.Suit) ctypes.Card {

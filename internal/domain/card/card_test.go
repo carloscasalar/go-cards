@@ -17,12 +17,12 @@ func TestCard_String(t *testing.T) {
 		{
 			name: "Ace of Spade",
 			card: card.NewCard(ctypes.Ace, ctypes.Spade),
-			want: "A[♠]",
+			want: " A[♠]",
 		},
 		{
 			name: "Jack of Diamond",
 			card: card.NewCard(ctypes.Jack, ctypes.Diamond),
-			want: "J[♦]",
+			want: " J[♦]",
 		},
 		{
 			name: "Ten of Club",
@@ -32,7 +32,7 @@ func TestCard_String(t *testing.T) {
 		{
 			name: "Two of Heart",
 			card: card.NewCard(ctypes.Two, ctypes.Heart),
-			want: "2[♥]",
+			want: " 2[♥]",
 		},
 	}
 	for _, tt := range tests {
